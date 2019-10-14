@@ -105,7 +105,7 @@ app.post('/customers/customer',  (req, res, err) => {
    });
 
 
-app.put('/customers/customer/:id',  (req, res, err) => { 
+app.post('/customers/customer/:id',  (req, res, err) => { 
     //const db = req.app.locals.db;
     console.log("inside put"+json.stringify(req));
     const cust_id = req.params.id;
