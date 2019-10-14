@@ -54,7 +54,7 @@ app.get('/customers', (req, res, err) => {
             res.json(
             	{ status: 200,
             	  body:{
-            	  	items[]:items
+            	  	items:items
             	  } }
             	);
           }          
@@ -144,7 +144,7 @@ app.get('/customers/customer/:id',  (req, res, err) => {
              res.json(
             	{ status: 200,
             	  body:{
-            	  	items[]:items
+            	  	items:items
             	  } }
             	);
           }          
