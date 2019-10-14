@@ -51,7 +51,12 @@ app.get('/customers', (req, res, err) => {
             reject(err);
           } else {
             console.log(items);
-            res.send(items);
+            res.json(
+            	{ status: 200,
+            	  body:{
+            	  	items[]:items
+            	  } }
+            	);
           }          
         });
      
@@ -92,7 +97,11 @@ app.post('/customers/customer',  (req, res, err) => {
     console.log("1 document inserted");
     
 });
-     res.send(myobj);
+     res.json(
+            	{ status: 200,
+            	  body: myobj
+            	}
+            	);
    });
 
 
@@ -110,7 +119,11 @@ app.put('/customers/customer/:id',  (req, res, err) => {
     console.log("1 document inserted");
     
 });
-     res.send(myobj);
+     res.json(
+            	{ status: 200,
+            	  body: myobj
+            	}
+            	);
    });
 
 app.get('/customers/customer/:id',  (req, res, err) => { 
@@ -128,7 +141,12 @@ app.get('/customers/customer/:id',  (req, res, err) => {
             reject(err);
           } else {
             console.log(items);
-            res.send(items);
+             res.json(
+            	{ status: 200,
+            	  body:{
+            	  	items[]:items
+            	  } }
+            	);
           }          
         });
 
