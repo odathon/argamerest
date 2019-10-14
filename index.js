@@ -111,10 +111,10 @@ app.post('/customers/customer/:id',  (req, res, err) => {
     const cust_id = req.params.id;
     console.log(cust_id);
     var myquery = {custid: cust_id};
-    var myobj = { $set: req.body};
+    var myobj = { $set:req.body};
   console.log(myobj);
 
-     dbo.collection("customers").updateOne(myquery,myobj, function(err, res) {
+     dbo.collection("customers").insertOne(myquery,myobj, function(err, res) {
     if (err) throw err;
     console.log("1 document inserted");
     
