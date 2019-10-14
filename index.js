@@ -18,6 +18,7 @@ let randomFixedInteger = function (length) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+var port = process.env.PORT || 5000;
 
 // Create a MongoDB connection pool and start the application
 // after the database connection is ready
@@ -30,8 +31,8 @@ client.connect(function(err,client){
   dbo=client.db("ardb");
   //console.log(app.locals.db);
 
-  app.listen(3000, () => {
-    console.log("Node.js app is listening at http://localhost:3000");
+  app.listen(port, () => {
+    console.log("Node.js app is listening at http://localhost:"+port);
   });
 });
 
